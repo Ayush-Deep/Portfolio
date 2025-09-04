@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Deep - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0f172a; /* slate-900 */
+            color: #cbd5e1; /* slate-300 */
+        }
+        .gradient-text {
+            background: linear-gradient(to right, #22d3ee, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .section {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .glass-card {
+            background: rgba(30, 41, 59, 0.5); /* slate-800 with 50% opacity */
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(51, 65, 85, 0.5); /* slate-700 with 50% opacity */
+            border-radius: 1rem;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50 bg-slate-900/80 backdrop-blur-lg border-b border-slate-700/50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold gradient-text">Ayush Deep</a>
+            <nav class="hidden md:flex items-center space-x-8">
+                <a href="#about" class="text-slate-300 hover:text-cyan-400 transition-colors duration-300">About</a>
+                <a href="#experience" class="text-slate-300 hover:text-cyan-400 transition-colors duration-300">Experience</a>
+                <a href="#skills" class="text-slate-300 hover:text-cyan-400 transition-colors duration-300">Skills</a>
+                <a href="#contact" class="text-slate-300 hover:text-cyan-400 transition-colors duration-300">Contact</a>
+                <a href="Resume Ayush_2.pdf" target="_blank" rel="noopener noreferrer" class="text-cyan-400 border border-cyan-400 px-4 py-2 rounded-md hover:bg-cyan-400 hover:text-slate-900 transition-colors duration-300">Resume</a>
+            </nav>
+            <button id="mobile-menu-button" class="md:hidden text-slate-300 focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+            <a href="#about" class="block py-2 text-slate-300 hover:text-cyan-400">About</a>
+            <a href="#experience" class="block py-2 text-slate-300 hover:text-cyan-400">Experience</a>
+            <a href="#skills" class="block py-2 text-slate-300 hover:text-cyan-400">Skills</a>
+            <a href="#contact" class="block py-2 text-slate-300 hover:text-cyan-400">Contact</a>
+            <a href="bin/Resume_Ayush.pdf" target="_blank" rel="noopener noreferrer" class="block py-2 text-cyan-400 hover:text-cyan-300">Resume</a>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-6 pt-24">
+        <!-- About Section -->
+        <section id="about" class="min-h-screen flex items-center justify-center text-center section">
+            <div>
+                <img src="bin/Photos.jpeg" alt="Ayush Deep" class="w-48 h-48 rounded-full mx-auto mb-8 border-4 border-slate-700 shadow-xl">
+                                 <h1 class="text-5xl md:text-7xl font-bold mb-4">
+                    I'm <span class="gradient-text">Ayush Deep</span>
+                </h1>
+                <h2 class="text-2xl md:text-3xl text-slate-400 mb-8">Naval Architecture & Ocean Engineering Student</h2>
+                <p class="max-w-3xl mx-auto text-lg text-slate-400 mb-10">
+                    Hardworking and enthusiastic college student pursuing B.Tech in Naval Architecture & Ocean Engineering. A Hobbyist Programmer who is dedicated, hardworking, and committed to becoming a dependable and valuable team member.
+                </p>
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+                    <a href="#contact" class="bg-cyan-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-cyan-600 transition-colors duration-300 w-full sm:w-auto">
+                        Get In Touch
+                    </a>
+                    <a href="bin/Resume_Ayush.pdf" target="_blank" rel="noopener noreferrer" class="border border-cyan-500 text-cyan-500 font-semibold px-8 py-3 rounded-lg hover:bg-cyan-500 hover:text-white transition-colors duration-300 w-full sm:w-auto">
+                        View Resume
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 section">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Work Experience</h2>
+            <div class="relative max-w-4xl mx-auto">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 w-0.5 h-full bg-slate-700 -translate-x-1/2"></div>
+                
+                <!-- Experience Items -->
+                <div class="space-y-16">
+                    
+                    <!-- IMU - BatStateU MoU -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 group-hover:bg-cyan-500 transition-colors duration-300 absolute left-1/2 -translate-x-1/2 md:hidden" aria-hidden="true">
+                           <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h4.5M12 3v13.5" /></svg>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)]">
+                           <div class="glass-card p-6 transform transition-transform duration-500 group-hover:scale-105">
+                                <p class="text-sm text-cyan-400 mb-1">Dec 2024 - Ongoing</p>
+                                <h3 class="text-xl font-bold text-white mb-2">Student Researcher</h3>
+                                <p class="text-cyan-400 font-semibold mb-3">IMU - BatStateU MoU</p>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                    <li>Developed concept design for fin actuation mechanism of biomimetic AUV.</li>
+                                    <li>Conducted Structural Analysis for fin loading under extreme conditions.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Build-Neo -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 group-hover:bg-cyan-500 transition-colors duration-300 absolute left-1/2 -translate-x-1/2 md:hidden" aria-hidden="true">
+                           <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h4.5M12 3v13.5" /></svg>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)]">
+                            <div class="glass-card p-6 transform transition-transform duration-500 group-hover:scale-105">
+                                <p class="text-sm text-cyan-400 mb-1">Sept 2023 - Present</p>
+                                <h3 class="text-xl font-bold text-white mb-2">Advisor & Head of R&D</h3>
+                                <a href="https://www.linkedin.com/company/build-neo/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 font-semibold mb-3 hover:text-cyan-300 transition-colors duration-300 inline-block">Build-Neo</a>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                    <li>Head of student-led R&D initiative-Build-NEO.</li>
+                                    <li>Worked on various functional boat models/projects.
+                                    <li>Participated in various Maritime Paper Conferences.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Perfomax.io -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 group-hover:bg-cyan-500 transition-colors duration-300 absolute left-1/2 -translate-x-1/2 md:hidden" aria-hidden="true">
+                           <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h4.5M12 3v13.5" /></svg>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)]">
+                            <div class="glass-card p-6 transform transition-transform duration-500 group-hover:scale-105">
+                                <p class="text-sm text-cyan-400 mb-1">June 2025 - July 2025</p>
+                                <h3 class="text-xl font-bold text-white mb-2">Project Intern</h3>
+                                <a href="https://perfomax.io/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 font-semibold mb-3 hover:text-cyan-300 transition-colors duration-300 inline-block">Perfomax.io</a>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                    <li>Conducted Data Analysis of Engine Data and performed Predictive Forecast algorithm.</li>
+                                    <li>Operated on Modbus/Canbus Communication Methodology.
+                                    <li>Performed OTA Protocol Implementation.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hooghly Cochin Shipyard Ltd. -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 group-hover:bg-cyan-500 transition-colors duration-300 absolute left-1/2 -translate-x-1/2 md:hidden" aria-hidden="true">
+                            <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h4.5M12 3v13.5" /></svg>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)]">
+                           <div class="glass-card p-6 transform transition-transform duration-500 group-hover:scale-105">
+                                <p class="text-sm text-cyan-400 mb-1">Dec 2024 - Jan 2025</p>
+                                <h3 class="text-xl font-bold text-white mb-2">Student Intern</h3>
+                                <a href="https://hooghlycsl.com/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 font-semibold mb-3 hover:text-cyan-300 transition-colors duration-300 inline-block">Hooghly Cochin Shipyard Ltd.</a>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                    <li>Worked on various aspects of 40T ASD BP Tugboat.</li>
+                                    <li>Preparation of Technical Evaluation Report of equipments.
+                                    <li>Production Design QC of 6S Block, Deck House (DH).</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Massachusetts Maritime Academy -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 group-hover:bg-cyan-500 transition-colors duration-300 absolute left-1/2 -translate-x-1/2 md:hidden" aria-hidden="true">
+                           <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h4.5M12 3v13.5" /></svg>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)]">
+                            <div class="glass-card p-6 transform transition-transform duration-500 group-hover:scale-105">
+                                <p class="text-sm text-cyan-400 mb-1">Feb 2024 - Oct 2024</p>
+                                <h3 class="text-xl font-bold text-white mb-2">Student Author</h3>
+                                <p class="text-cyan-400 font-semibold mb-3">IAMUS 2024 | Massachusetts Maritime Academy</p>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                    <li>Co-authored paper on Fresnel-Lens based Solar Heat Accumulator.</li>
+                                    <li>Worked on numerical analysis and designed a custom 3D model.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Eunoia Innovations -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-700 group-hover:bg-cyan-500 transition-colors duration-300 absolute left-1/2 -translate-x-1/2 md:hidden" aria-hidden="true">
+                           <svg class="w-5 h-5 text-cyan-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-1.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25A2.25 2.25 0 015.25 3h4.5M12 3v13.5" /></svg>
+                        </div>
+                        <div class="w-full md:w-[calc(50%-2.5rem)]">
+                            <div class="glass-card p-6 transform transition-transform duration-500 group-hover:scale-105">
+                                <p class="text-sm text-cyan-400 mb-1">June 2024 - July 2024</p>
+                                <h3 class="text-xl font-bold text-white mb-2">Project Intern</h3>
+                                <a href="https://www.linkedin.com/company/eunoia-innovations/" target="_blank" rel="noopener noreferrer" class="text-cyan-400 font-semibold mb-3 hover:text-cyan-300 transition-colors duration-300 inline-block">Eunoia Innovations</a>
+                                <ul class="list-disc list-inside text-slate-400 space-y-1">
+                                    <li>Interfaced underwater sensors with microprocessors.</li>
+                                    <li>Established LoRa based comms system for USVA prototype.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 section">
+            <h2 class="text-4xl font-bold text-center mb-12 gradient-text">Skills</h2>
+            <div class="max-w-4xl mx-auto flex flex-wrap justify-center gap-4">
+                <span class="skill-tag">Python</span>
+                <span class="skill-tag">MS Office</span>
+                <span class="skill-tag">Maritime loT</span>
+                <span class="skill-tag">Rhino 3D</span>
+                <span class="skill-tag">Canva</span>
+                <span class="skill-tag">Napa</span>
+                <span class="skill-tag">Ansys</span>
+                <span class="skill-tag">AutoCad</span>
+                <span class="skill-tag">Maxsurf</span>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 section">
+            <h2 class="text-4xl font-bold text-center mb-4 gradient-text">Contact Me</h2>
+            <p class="text-center text-slate-400 mb-12 max-w-2xl mx-auto">I'm always open to discussing new projects, creative ideas, or opportunities to be part of an amazing team. Feel free to reach out!</p>
+            <div class="flex flex-col md:flex-row items-center justify-center gap-8">
+                <a href="mailto:ayushdeep169@gmail.com" class="flex items-center gap-3 text-lg text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                    <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                    ayushdeep169@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/itzayush/" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-lg text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                   <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                    LinkedIn
+                </a>
+                <a href="https://github.com/Ayush-Deep" target="_blank" rel="noopener noreferrer" class="flex items-center gap-3 text-lg text-slate-300 hover:text-cyan-400 transition-colors duration-300">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    GitHub
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="border-t border-slate-800 mt-20">
+        <div class="container mx-auto px-6 py-6 text-center text-slate-500">
+            <p>&copy; 2025 Ayush Deep. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Intersection Observer for scroll animations
+        const sections = document.querySelectorAll('.section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Tailwind config for custom styles
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
+                    },
+                    keyframes: {
+                        fadeInUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        },
+                    },
+                }
+            },
+             plugins: [
+                function({ addUtilities }) {
+                    addUtilities({
+                        '.skill-tag': {
+                            '@apply bg-slate-800 text-cyan-300 text-sm font-medium px-4 py-2 rounded-full transition-all duration-300 hover:bg-cyan-500 hover:text-white cursor-pointer': {},
+                        }
+                    })
+                }
+            ]
+        }
+    </script>
+</body>
+</html>
+
+
+
+
+
+
